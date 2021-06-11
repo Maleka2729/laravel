@@ -31,12 +31,12 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto justify-content-center">
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Accueil </a>
+                        <a class="nav-link" href="/">Accueil </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Chercher un médecin</a>
+                        <a class="nav-link" href="../doctors">Chercher un médecin</a>
                     </li>
 
                     <li class="nav-item">
@@ -51,7 +51,7 @@
         </nav>
     </header>
 
-    <h1> @yield('title') </h1>
+    <h1 style=""> @yield('title') </h1>
 
     <div class='container' style="height: auto; width:100%">
         @yield('contents')

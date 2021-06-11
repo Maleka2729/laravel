@@ -5,12 +5,18 @@
 @endsection
 
 @section('contents')
-<h2>Links and buttons</h2>
+<h2 class='item'>Links and buttons</h2>
 
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-    Lorem Ipsum.</p>
+<div class="row">
+    <div class="input-group col-md-6" style="margin-left: auto; margin-right: auto;">
+        <span class="input-group-text" id="basic-addon1">Medecin</span>
+        <input type="text" class="form-control" placeholder="Rechercher un médecin" aria-label="Username"
+            aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group col-md-6">
+        <span class="input-group-text" id="basic-addon1">Localisation</span>
+        <input type="text" class="form-control" placeholder="Rechercher une localisation" aria-label="Username"
+            aria-describedby="basic-addon1">
+    </div>
+</div>
 @endsection
