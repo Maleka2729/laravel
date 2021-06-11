@@ -4,7 +4,7 @@
     <h1>Liste Docteurs</h1>
 @endsection
 
-@section('content')
+@section('contents')
     <table class="table table-bordered table-responsive-lg">
         <tr>
             <th>Name</th>

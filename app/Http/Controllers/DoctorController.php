@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
 
-class DoctorsController extends Controller
+class DoctorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class DoctorsController extends Controller
     public function index()
     {
         $doctors = Doctor::all();
-        return view('doctor', ['doctor' => $doctors]);
+        return view('doctors', ['doctors' => $doctors]);
     }
 
     /**

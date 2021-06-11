@@ -38,7 +38,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Chercher un médecin</a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
@@ -50,27 +50,28 @@
             </div>
         </nav>
     </header>
-    
+
     <h1> @yield('title') </h1>
 
-    <div class='container'>
-        @yield('content')
+    <div class='container' style="height: auto; width:100%">
+        @yield('contents')
     </div>
 
-    <footer class="navbar-dark bg-dark">
+
+</body>
+
+<footer class="navbar-dark bg-dark">
     <hr>
     <div class="container">
         <a href="">
-            <img src="" alt="Logo" height="90"
-                style="margin-left: 45%;">
+            <img src="" alt="Logo" height="90" style="margin-left: 45%;">
         </a>
-        <div class="collapse navbar-collapse d-flex justify-content-center"style="color:white;">
-                    © Copyright 2021 Promo dev-web. Tous droits réservés.
+        <div class="collapse navbar-collapse d-flex justify-content-center" style="color:white;">
+            © Copyright 2021 Promo dev-web. Tous droits réservés.
         </div>
     </div>
     <hr>
     </div>
-    </footer>
-</body>
+</footer>
 
 </html>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Patients;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 
 class PatientsController extends Controller
@@ -24,7 +24,7 @@ class PatientsController extends Controller
      */
     public function create()
     {
-        return view('patients.create');
+        return view('patient.create');
     }
 
     /**
@@ -41,19 +41,19 @@ class PatientsController extends Controller
             'emails' =>'required',
         ]);
 
-        Patients::create($request->all());
+        Patient::create($request->all());
 
         return redirect()->route('patients.index')
-            ->with('success', 'Patients created succefully');
+            ->with('success', 'Patient created succefully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Patients  $patients
+     * @param  \App\Models\Patient  $patients
      * @return \Illuminate\Http\Response
      */
-    public function show(Patients $patients)
+    public function show(Patient $patients)
     {
         return view('patients.show', compact('patients'));
     }
@@ -61,10 +61,10 @@ class PatientsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Patients  $patients
+     * @param  \App\Models\Patient  $patients
      * @return \Illuminate\Http\Response
      */
-    public function edit(Patients $patients)
+    public function edit(Patient $patients)
     {
         return view('patients.edit', compact('patients'));
     }
@@ -73,33 +73,33 @@ class PatientsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Patients  $patients
+     * @param  \App\Models\Patient  $patients
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Patients $patients)
+    public function update(Request $request, Patient $patient)
     {
         $request->validate([
             'firstNames' => 'required',
             'names' => 'required',
             'emails' =>'required',
         ]);
-        $patients->update($request->all());
+        $patient->update($request->all());
 
         return redirect()->route('patients.index')
-            ->with('success', 'Patients updated succefully');
+            ->with('success', 'Patient updated succefully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Patients  $patients
+     * @param  \App\Models\Patient  $patients
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Patients $patients)
+    public function destroy(Patient $patient)
     {
-        $patients->delete();
+        $patient->delete();
 
         return redirect()->route('patients.index')
-            ->with('success', 'Patients deleted successfully');
+            ->with('success', 'Patient deleted successfully');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DoctorsController;
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\PatientsController;
 use App\Http\Controllers\ReservationsController;
 use App\Http\Controllers\SpecialitiesController;
@@ -31,7 +31,7 @@ Route::get('/doctors', function () {
 
 Route::resource('patients', PatientsController::class);
 Route::resource('specialities', SpecialitiesController::class);
-Route::resource('doctors', DoctorsController::class);
+Route::resource('doctors', DoctorController::class);
 Route::resource('reservations', ReservationsController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
